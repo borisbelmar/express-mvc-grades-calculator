@@ -1,0 +1,25 @@
+<section class="container py-4">
+  <h1>Calculadora de Notas</h1>
+  <form action="/" method="post">
+    <div class="mb-3">
+      <label for="maths" class="form-label">Nota Matemáticas</label>
+      <input type="number" class="form-control" name="maths" value="{{maths}}">
+    </div>
+    <div class="mb-3">
+      <label for="chemistry" class="form-label">Nota Química</label>
+      <input type="number" class="form-control" name="chemistry" value="{{chemistry}}">
+    </div>
+    <div class="mb-3">
+      <label for="physics" class="form-label">Nota Física</label>
+      <input type="number" class="form-control" name="physics" value="{{physics}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular promedio</button>
+  </form>
+  
+  {{#if average}}
+  <div class="mt-3 fs-4">
+    <p><span class="fw-bold">Promedio:</span> {{average}}</p>
+  </div>
+  {{/if}}
+</section>
+
